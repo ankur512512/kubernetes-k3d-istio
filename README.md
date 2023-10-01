@@ -1,3 +1,8 @@
+# Cloning repo
+```bash
+git clone https://github.com/ankur512512/kubernetes-kind-fullsetup.git
+cd kubernetes-kind-fullsetup
+```
 # Setup kind to forward http & https requests to kind ingress controller using port mappings
 ```bash
 kind create cluster --config=config.yaml
