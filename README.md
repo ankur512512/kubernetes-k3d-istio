@@ -6,7 +6,7 @@ k3d cluster create --api-port 6550 -p '80:80@loadbalancer' -p '443:443@loadbalan
 
 # Install ingress controller
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/refs/heads/main/deploy/static/provider/cloud/deploy.yaml
 ```
 
 # Install cert-manager and create cert issuer
