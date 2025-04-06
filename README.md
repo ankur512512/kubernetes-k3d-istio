@@ -27,14 +27,22 @@ kubectl apply -f argo-ingress.yaml
 # (Optional) Install Istio side-car pattern
 
 ### Install Istio Base components like CRDs and cluster roles
+```
 helm repo add istio https://istio-release.storage.googleapis.com/charts
 helm install istio-base istio/base -n istio-system --create-namespace --wait
+```
 
 ### Install Istiod Control plane node that will manage proxies
+```
 helm install istiod istio/istiod -n istio-system --wait
+```
 
 ### (Skip this if you already have nginx ingress controller installed) Install Ingress gateway
+```
 helm install istio-ingressgateway istio/gateway -n istio-system --create-namespace --wait
+```
 
 ### Label default namespace to include in Istio mesh
+```
 kubectl label namespace default istio-injection=enabled
+```
